@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from "@angular/core";
 
-@Pipe({ name: "phoneNumber", standalone: true })
+@Pipe({ name: "phoneNumber", standalone: true }) //I was using standalone in this project, make sure to double check if this is your desired behavior
 export class PhoneNumberPipe implements PipeTransform {
   transform(rawNum: string) {
     const numWithOnlyNums = rawNum.replace(/\D/g, "");
